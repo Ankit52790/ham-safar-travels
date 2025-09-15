@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ham Safar Tour & Travels — कार बुकिंग</title>
+  <meta name="description" content="भीमलपुर, पवई, आजमगढ़ के आस-पास — 24x7  कार बुकिंग। भरोसेमंद सेवा | किफायती रेट | एक्सपीरियंस्ड ड्राइवर">
+
+  <!--CSS-->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <!--<div class="logo"-->
+        
+  <img src="image\logo.png" alt="Ham Safar Logo" class="logo-img">
+</div>
+
+      <div>
+        <h1>Ham Safar Tour & Travels</h1>
+        <div class="small-muted">भीमलपुर, पवई, आजमगढ़ के आस-पास • 24x7 कार सेवा</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Lead / Intro -->
+    <section class="card">
+      <p class="lead">📍 <strong>भीमलपुर, पवई, आजमगढ़</strong> के आस-पास — <strong>Car</strong> कार बुकिंग के लिए संपर्क करें।</p>
+    </section>
+
+    <section class="grid">
+
+      <!-- Services & Contact -->
+      <div class="card">
+        <div class="feature">
+          <div style="font-size:28px;line-height:1">🛻</div>
+          <div>
+            <h3>हमारी सेवाएँ</h3>
+            <ul class="services">
+              <li>शादी की यात्रा / बारात</li>
+              <li>हॉस्पिटल / मेडिकल राउंड</li>
+              <li>रेलवे स्टेशन और एयरपोर्ट पिकअप/ड्रॉप</li>
+              <li>बाहर शहर (Outstation) और लोकल ट्रिप</li>
+              <li>24x7 उपलब्धता — किसी भी समय कॉल करें</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr style="margin:12px 0">
+
+        <div class="contact-big">
+          <div>
+            <div class="phone">📞 +91-94520 72543</div>
+            <div class="small">बुकिंग के लिए कॉल करें — तुरंत उपलब्धता जानें</div>
+
+            <div class="top-strip">
+              <a class="btn btn-call" href="tel:+919452072543">अब कॉल करें</a>
+              <a class="btn btn-whatsapp" href="https://wa.me/919452072543" target="_blank" rel="noopener">WhatsApp पर भेजें</a>
+              <a class="btn btn-book" href="#booking">ऑनलाइन बुकिंग</a>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top:12px">🙏 <strong>भरोसेमंद सेवा</strong> | <strong>किफायती रेट</strong> | <strong>एक्सपीरियंस्ड ड्राइवर</strong></p>
+
+        <hr style="margin:12px 0">
+
+        <h3>क्यों हमारे साथ यात्रा करें?</h3>
+        <ul class="services">
+          <li>सफाई व मेंटेनेंस: हर यात्रा से पहले वाहन की चेकिंग।</li>
+          <li>अनुभवी ड्राइवर: सुरक्षित और समयनिष्ठ ड्राइविंग।</li>
+          <li>पारदर्शी रेटिंग: छिपे हुए चार्ज नहीं।</li>
+        </ul>
+      </div>
+
+      <!-- Booking Form -->
+      <aside class="card">
+        <h3 id="booking">ऑनलाइन बुकिंग फॉर्म</h3>
+        <p class="small-muted">नीचे फॉर्म भरकर बुक करें — हम कॉल या WhatsApp पर पुष्टि करेंगे।</p>
+        <form id="bookingForm" onsubmit="return submitForm(event)">
+          <label>आपका नाम</label>
+          <input type="text" id="name" placeholder="पूरा नाम" required />
+          <label>फोन नंबर</label>
+          <input type="tel" id="phone" placeholder="10 अंकों का मोबाइल नंबर" pattern="[0-9]{10}" required />
+          <label>यात्रा प्रकार</label>
+          <select id="tripType">
+            <option>लोकल</option>
+            <option>आउटस्टेशन</option>
+            <option>एयरपोर्ट/रेलवे</option>
+            <option>शादी/समारोह</option>
+          </select>
+          <label>दिनांक और समय</label>
+          <input type="datetime-local" id="datetime" />
+          <label>संदेश / पिकअप</label>
+          <textarea id="notes" rows="3" placeholder="पिकअप स्थान और किसी विशेष निर्देश को लिखें"></textarea>
+           <label>संदेश / डेस्टिनेशन</label>
+          <textarea id="notes" rows="3" placeholder="डेस्टिनेशन और किसी विशेष निर्देश को लिखें"></textarea>
+
+          <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+            <button type="submit" class="btn btn-book">बुकिंग भेजें</button>
+            <a class="btn btn-whatsapp" id="waOpen" href="https://wa.me/919452072543" target="_blank" class="whatsapp-float">सीधी WhatsApp</a>
+          </div>
+
+          <div id="formMsg" class="small-muted" style="margin-top:8px"></div>
+        </form>
+
+        <hr style="margin:12px 0">
+        <h4>स्थान</h4>
+
+<!-- Map Buttons -->
+<div class="map-buttons">
+  <button onclick="changeMap('wide')">🌍 Wide View</button>
+  <button onclick="changeMap('medium')">🗺 Medium View</button>
+  <button onclick="changeMap('close')">📍 Close View</button>
+</div>
+
+<!-- Map Iframe -->
+<div class="map">
+   <iframe id="mapFrame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1420.736!2d83.238012!3d26.023479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991178a4a0a0b25%3A0xe5d4b6f0a9811f01!2sBhimlapur%2C%20Pawai%2C%20Azamgarh%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1694612345678!5m2!1sen!2sin"
+            width="100%" height="250" style="border:0; border-radius:10px;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+</div>
+
+
+
+      </aside>
+
+    </section>
+
+    <!-- Gallery Slider (Optimized) -->
+<section class="card">
+  <h3>हमारी गैलरी</h3>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="image/ertiga-car.jpg" alt="Ertiga Car">
+      <img src="image/wedding-car.jpg" alt="Wedding Car">
+      <img src="image/local-travel.jpg" alt="Local Travel">
+      <img src="image/driver-service.jpg" alt="Driver & Service">
+      <img src="image/Marriege.jpg" alt="Family Trip">
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">◀</button>
+    <button class="next" onclick="moveSlide(1)">▶</button>
+    <div class="dots" id="dotsContainer"></div>
+  </div>
+</section>
+
+    <!-- FAQ Section -->
+    <section class="card" style="margin-top:14px">
+      <h3>सामान्य प्रश्न</h3>
+      <p><strong>क्या ड्राइवर उपलब्ध है?</strong> — हाँ, अनुभवी ड्राइवर के साथ।</p>
+      <p><strong>क्या 24x7 सर्विस है?</strong> — हाँ, आप किसी भी समय कॉल कर सकते हैं।</p>
+      <p><strong>भुगतान कैसे?</strong> — कैश, UPI या व्हाट्सएप के जरिए एडवांस।</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="card" style="padding:12px">
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center">
+          <div>© <strong>Ham Safar Tour and Travels</strong> — भरोसेमंद ग्रामीण कार रेंटल</div>
+          <div>📞 <a href="tel:+91-9452072543">94520 72543</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--JS-->
+  <script src="js/script.js"></script>
+</body>
+</html>
