@@ -110,6 +110,9 @@
         </form>
 
         <hr style="margin:12px 0">
+
+        <!-- Location Section -->
+<section id="location" style="margin-top:20px;">
         <h4>स्थान</h4>
 
 <!-- Map Buttons -->
@@ -120,16 +123,23 @@
 </div>
 
 <!-- Map Iframe -->
-<div class="map">
+<div class="map" style="position:relative;">
    <iframe id="mapFrame"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1420.736!2d83.238012!3d26.023479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991178a4a0a0b25%3A0xe5d4b6f0a9811f01!2sBhimlapur%2C%20Pawai%2C%20Azamgarh%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1694612345678!5m2!1sen!2sin"
-            width="100%" height="250" style="border:0; border-radius:10px;"
-            allowfullscreen="" loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41022.22063681756!2d82.68153905868536!3d26.192739470739028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39905900034f7fc5%3A0x7b9ae556aef55409!2z4KS54KSuIOCkuOCkq-CksCDgpJ_gpYLgpLAg4KSP4KSC4KShIOCkn-CljeCksOClh-CkteCksuCljeCkuA!5e1!3m2!1sen!2sin!4v1758017635875!5m2!1sen!2sin"
+            width="100%" height="250" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
+            
           </iframe>
+
+<!-- Get Directions Button -->
+    <a href="https://www.google.com/maps/dir/?api=1&destination=26.192739470739028,82.68153905868536" 
+       target="_blank" 
+       style="position:absolute;bottom:12px;right:12px;padding:10px 14px;background:#1f6feb;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+       Get Directions
+    </a>
 </div>
 
-
+</section>
 
       </aside>
 
@@ -140,17 +150,30 @@
   <h3>हमारी गैलरी</h3>
   <div class="slider">
     <div class="slides" id="slides">
-      <img src="image/ertiga-car.jpg" alt="Ertiga Car">
-      <img src="image/wedding-car.jpg" alt="Wedding Car">
-      <img src="image/local-travel.jpg" alt="Local Travel">
-      <img src="image/driver-service.jpg" alt="Driver & Service">
-      <img src="image/Marriege.jpg" alt="Family Trip">
+      <img src="image/ertiga-car.jpg" alt="Ertiga Car" onclick="openModel(0)">
+      <img src="image/wedding-car.jpg" alt="Wedding Car" onclick="openModel(1)">
+      <img src="image/local-travel.jpg" alt="Local Travel" onclick="openModel(2)">
+      <img src="image/driver-service.jpg" alt="Driver & Service" onclick="openModel(3)">
+      <img src="image/Marriege.jpg" alt="Family Trip" onclick="openModel(4)">
     </div>
     <button class="prev" onclick="moveSlide(-1)">◀</button>
     <button class="next" onclick="moveSlide(1)">▶</button>
     <div class="dots" id="dotsContainer"></div>
   </div>
 </section>
+
+
+<!-- Modal -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div id="modalCaption"></div>
+    <!-- Navigation -->
+  <a class="modal-prev" onclick="changeModalSlide(-1)">&#10094;</a>
+  <a class="modal-next" onclick="changeModalSlide(1)">&#10095;</a>
+</div>
+</div>
+
 
     <!-- FAQ Section -->
     <section class="card" style="margin-top:14px">
