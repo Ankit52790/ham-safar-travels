@@ -1,0 +1,74 @@
+<!--place.html-->
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>स्थान — Ham Safar Tour & Travels</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <img src="image/logo.png" alt="Ham Safar Logo" class="logo-img">
+      <h1>Ham Safar Tour & Travels</h1>
+    </div>
+    <nav class="main-nav">
+  <a href="index.html" class="nav-btn">Home</a>
+  <a href="facilities.html" class="nav-btn">सुविधाएँ</a>
+  <a href="booking.html" class="nav-btn">ऑनलाइन बुकिंग</a>
+  <a href="place.html" class="nav-btn">स्थान</a>
+  <a href="gallery.html" class="nav-btn">गैलरी</a>
+</nav>
+
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+   <!-- Location Section -->
+<section id="location" class="card" style="margin-top:20px;">
+          <h2>हमारा स्थान</h2>
+<p style="margin-bottom:10px;">
+        आप नीचे दिए गए मैप से हमारा सही स्थान देख सकते हैं और सीधे Google Maps पर दिशा-निर्देश भी प्राप्त कर सकते हैं।
+      </p>
+
+
+<!-- Map Buttons -->
+<div class="map-buttons">
+  <button onclick="changeMap('wide')">🌍 Wide View</button>
+  <button onclick="changeMap('medium')">🗺 Medium View</button>
+  <button onclick="changeMap('close')">📍 Close View</button>
+</div>
+
+<!-- Map Iframe -->
+<div class="map" style="position:relative;">
+   <iframe id="mapFrame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41022.22063681756!2d82.68153905868536!3d26.192739470739028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39905900034f7fc5%3A0x7b9ae556aef55409!2z4KS54KSuIOCkuOCkq-CksCDgpJ_gpYLgpLAg4KSP4KSC4KShIOCkn-CljeCksOClh-CkteCksuCljeCkuA!5e1!3m2!1sen!2sin!4v1758017635875!5m2!1sen!2sin"
+            width="100%" height="250" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            
+          </iframe>
+
+<!-- Get Directions Button -->
+    <a href="https://www.google.com/maps/dir/?api=1&destination=26.192739470739028,82.68153905868536" 
+       target="_blank"
+       class="=directiom"
+       style="position:absolute;bottom:12px;right:12px;padding:10px 14px;background:#1f6feb;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+       Get Directions
+    </a>
+</div>
+
+</section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Ham Safar Tour & Travels | 📞 <a href="tel:+919452072543">94520 72543</a></p>
+  </footer>
+  <script src="js\script.js"></script>
+
+</body>
+</html>

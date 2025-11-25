@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>गैलरी — Ham Safar Tour & Travels</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <img src="image/logo.png" alt="Ham Safar Logo" class="logo-img">
+      <h1>Ham Safar Tour & Travels</h1>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+  <a href="index.html" class="nav-btn">Home</a>
+  <a href="facilities.html" class="nav-btn">सुविधाएँ</a>
+  <a href="booking.html" class="nav-btn">ऑनलाइन बुकिंग</a>
+  <a href="place.html" class="nav-btn">स्थान</a>
+  <a href="gallery.html" class="nav-btn">गैलरी</a>
+</nav>
+
+
+  </header>
+
+  
+      <!-- Gallery Slider (Optimized) -->
+<section class="card">
+  <h3>📸 हमारी गैलरी</h3>
+  <div class="slider">
+    <div class="slides active" id="slides">
+      <div class="slide"><img src="image/ertiga-car.jpg" alt="Ertiga Car" onclick="openModal(0)"></div>
+      <div class="slide"><img src="image/wedding-car.png" alt="Wedding Car" onclick="openModal(1)"></div>
+      <div class="slide"><img src="image/local-travel.jpg" alt="Local Travel" onclick="openModal(2)"></div>
+      <div class="slide"><img src="image/driver-service.jpg" alt="Driver & Service" onclick="openModal(3)"></div>
+      <div class="slide"><img src="image/Marriege.jpg" alt="Family Trip" onclick="openModal(4)"></div>
+      <img src="image/car1.png" alt="Car 1" class="gallery-img">
+      <img src="image/car2.png" alt="Car 2" class="gallery-img">
+      <img src="image/car3.png" alt="Car 3" class="gallery-img">
+      <img src="image/place1.jpg" alt="Place 1" class="gallery-img">
+      <img src="image/place2.png" alt="Place 2" class="gallery-img">
+      <img src="image/24x7 avaialability.png" alt="Avaialability" class="gallery-img">
+      <img src="image/driver-service.jpg" alt="Driver Service" class="gallery-img">
+      
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">◀</button>
+    <button class="next" onclick="moveSlide(1)">▶</button>
+    <div class="dots" id="dotsContainer"></div>
+  </div>
+</section>
+
+
+<!-- Modal -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div id="modalCaption"></div>
+  
+    <!-- Navigation -->
+  <a class="modal-prev" onclick="changeModalSlide(-1)">&#10094;</a>
+  <a class="modal-next" onclick="changeModalSlide(1)">&#10095;</a>
+</div>
+</div>
+
+
+    <!-- FAQ Section -->
+    <section class="card" style="margin-top:14px">
+      <h3>सामान्य प्रश्न</h3>
+      <p><strong>क्या ड्राइवर उपलब्ध है?</strong> — हाँ, अनुभवी ड्राइवर के साथ।</p>
+      <p><strong>क्या 24x7 सर्विस है?</strong> — हाँ, आप किसी भी समय कॉल कर सकते हैं।</p>
+      <p><strong>भुगतान कैसे?</strong> — कैश, UPI या व्हाट्सएप के जरिए एडवांस।</p>
+    </section>
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>© Ham Safar Tour & Travels | 📞 <a href="tel:+919452072543">94520 72543</a></p>
+  </footer>
+
+  <script src="js\script.js"></script>
+</body>
+
+
+</html>
